@@ -1,3 +1,5 @@
+using WeatherApp.Web;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -23,5 +25,15 @@ app.MapControllerRoute(
     pattern: "{controller}/{action=Index}/{id?}");
 
 app.MapFallbackToFile("index.html");
+
+app.MapGet("/weather", () =>
+{
+    return Results.Ok(new WeatherForecast()
+    {
+        TemperatureC = 21,
+        Date = DateOnly.FromDateTime(DateTime.Now),
+        Summary = "Ok"
+    });
+});
 
 app.Run();
