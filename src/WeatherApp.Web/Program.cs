@@ -31,7 +31,11 @@ app.MapGet("/weather", () =>
     return Results.Ok(new WeatherForecast()
     {
         TemperatureC = 21,
-        Date = DateOnly.FromDateTime(DateTime.Now),
+        Date = new WeatherDate()
+        {
+            Date = DateOnly.FromDateTime(DateTime.Now),
+            DayOfWeek = DateTime.Now.DayOfWeek.ToString()
+        },
         Summary = "Ok"
     });
 });
