@@ -1,4 +1,6 @@
+using Microsoft.AspNetCore.Mvc;
 using WeatherApp.Web;
+using WeatherApp.Web.Core.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -26,18 +28,12 @@ app.MapControllerRoute(
 
 app.MapFallbackToFile("index.html");
 
-app.MapGet("/weather", () =>
-{
-    return Results.Ok(new WeatherForecast()
+app.MapGet("/weather",
+    async ([FromQuery] decimal lon, [FromQuery] decimal lat,
+        [FromServices] IWeatherForecastProvider weatherForecastProvider) =>
     {
-        TemperatureC = 21,
-        Date = new WeatherDate()
-        {
-            Date = DateOnly.FromDateTime(DateTime.Now),
-            DayOfWeek = DateTime.Now.DayOfWeek.ToString()
-        },
-        Summary = "Ok"
+        var res = await weatherForecastProvider.GetWeatherForecastAsync(new GetWeatherForecastQuery(new Coordinates((double)lat, (double)lon), DateOnly.FromDateTime(DateTime.Now)));
+        return Results.Ok(res);
     });
-});
 
 app.Run();
