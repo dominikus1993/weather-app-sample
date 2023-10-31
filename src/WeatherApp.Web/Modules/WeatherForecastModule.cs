@@ -2,7 +2,7 @@
 
 namespace WeatherApp.Web.Modules;
 
-public class WeatherForecastModule : ICarterModule
+public sealed class WeatherForecastModule : ICarterModule
 {
     public void AddRoutes(IEndpointRouteBuilder app)
     {
