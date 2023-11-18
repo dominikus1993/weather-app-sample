@@ -5,11 +5,9 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{6EB8CAAB-7597-4B35-87D0-0B8789C6DD2A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherApp.Web", "src\WeatherApp.Web\WeatherApp.Web.csproj", "{D99126B7-5F32-43F5-BBB4-343CD0EA2D25}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{6AA187B9-D2D1-4C26-92AA-0498BCB9C967}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherApp.Web.Tests", "tests\WeatherApp.Web.Tests\WeatherApp.Web.Tests.csproj", "{6A459D23-3CCE-4884-8B27-B61A39A5F9C3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Weather.Bot", "src\Weather.Bot\Weather.Bot.csproj", "{BACDF4F0-E5A2-493D-85FD-B05E53DD7C24}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,17 +18,12 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D99126B7-5F32-43F5-BBB4-343CD0EA2D25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D99126B7-5F32-43F5-BBB4-343CD0EA2D25}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D99126B7-5F32-43F5-BBB4-343CD0EA2D25}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D99126B7-5F32-43F5-BBB4-343CD0EA2D25}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6A459D23-3CCE-4884-8B27-B61A39A5F9C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6A459D23-3CCE-4884-8B27-B61A39A5F9C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6A459D23-3CCE-4884-8B27-B61A39A5F9C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6A459D23-3CCE-4884-8B27-B61A39A5F9C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BACDF4F0-E5A2-493D-85FD-B05E53DD7C24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BACDF4F0-E5A2-493D-85FD-B05E53DD7C24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BACDF4F0-E5A2-493D-85FD-B05E53DD7C24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BACDF4F0-E5A2-493D-85FD-B05E53DD7C24}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{D99126B7-5F32-43F5-BBB4-343CD0EA2D25} = {6EB8CAAB-7597-4B35-87D0-0B8789C6DD2A}
-		{6A459D23-3CCE-4884-8B27-B61A39A5F9C3} = {6AA187B9-D2D1-4C26-92AA-0498BCB9C967}
+		{BACDF4F0-E5A2-493D-85FD-B05E53DD7C24} = {6EB8CAAB-7597-4B35-87D0-0B8789C6DD2A}
 	EndGlobalSection
 EndGlobal
