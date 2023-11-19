@@ -12,4 +12,16 @@
     <PackageReference Include="Discord.Net.Webhook" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Core\Providers\" />
+    <Folder Include="Core\Publishers\" />
+    <Folder Include="Infrastructure\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
