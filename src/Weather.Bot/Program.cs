@@ -41,15 +41,3 @@ class LoggingFilter : CommandFilterAttribute
         }
     }
 }
-
-class RequirePrivilege : CommandFilterAttribute
-{
-    public override ValueTask<int> OnCommandExecutionAsync(CoconaCommandExecutingContext ctx, CommandExecutionDelegate next)
-    {
-        if (Environment.UserName != "Administrator" || Environment.UserName != "root")
-        {
-            throw new CommandExitedException("Error: Permission denied.", 1);
-        }
-        return next(ctx);
-    }
-}
